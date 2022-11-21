@@ -1,0 +1,11 @@
+footer a {
+	cursor: pointer;
+	font-weight: bolder;
+	color: indigo;
+}
+
+footer.center {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}

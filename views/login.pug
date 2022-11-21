@@ -1,0 +1,16 @@
+extends main_layout.pug    
+
+block content
+	//h1 #{title} в Pug
+	.mui-container
+		form(method="post" action="/login").mui-form.mui-panel
+			legend Авторизация
+			.mui-textfield.mui-textfield--float-label
+				input(type='text' required='' id="login" name="login")
+				label Логин
+			.mui-textfield.mui-textfield--float-label
+				input(type='password' required='' id="password" name="password")
+				label Пароль
+			button.mui-btn.mui-btn--primary(type='submit') Войти
+			if message
+				p.mui--text-accent #{message}

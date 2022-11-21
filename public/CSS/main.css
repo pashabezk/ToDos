@@ -1,0 +1,52 @@
+html, body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.app-wrapper > main {
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.app-wrapper > header,
+.app-wrapper > footer {
+	flex-grow: 0;
+}
+
+.icon {
+	width: 64px;
+	height: auto;
+}
+
+.icon-full {
+	width: max-content;
+	height: auto;
+}
+
+.icon-margins {
+	margin: 10px;
+}
+
+.icon-margins-auto {
+	margin: auto;
+}
+
+.center {
+	margin: 0 auto 15px;
+	width: 100%;
+	max-width: 1000px;
+}

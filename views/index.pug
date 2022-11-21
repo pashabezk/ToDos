@@ -1,0 +1,28 @@
+extends main_layout.pug
+
+block styles
+    link(rel='stylesheet' href='CSS/todos.css')
+
+block content
+    h1 Список задач
+    form(action="/newTodo" method="get")
+        button.mui-btn.mui-btn--primary Добавить
+    each todo in todos
+        .mui-panel
+            .todo-container
+                .mui-checkbox
+                    label
+                        if todo.completed
+                            input(type="checkbox" checked onchange="toggleTodoStatus(this)" data-id=todo.id)
+                            span.completed #{todo.task}
+                        else
+                            input(type="checkbox" onchange="toggleTodoStatus(this)" data-id=todo.id)
+                            span #{todo.task}
+                button(onClick="deleteTodo(" + todo.id + ")").mui-btn.mui-btn--small.mui-btn--fab.mui-btn--danger
+                    img(src="Img/trash-bin.svg", alt="delete").icon-full.icon-margins-auto
+    else
+        .mui-panel
+            p Пока нет ни одной задачи. Создайте первую!
+
+block scripts
+    script(src="JS/todos.js")

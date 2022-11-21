@@ -1,0 +1,9 @@
+.completed {
+	text-decoration: line-through;
+}
+
+.todo-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}

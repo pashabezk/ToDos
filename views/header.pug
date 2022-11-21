@@ -1,0 +1,13 @@
+header
+	.mui-appbar
+		.center.header-top
+			a(href="/").header-top-column.left
+				img(src="Img/list.svg", alt="logo").icon.icon-margins
+				p.mui--text-display1 ToDos
+			.header-top-column.right
+				if isAuth
+					form(action="/logout" method="get")
+						button.mui-btn Выйти
+				else
+					form(action="/login" method="post")
+						button.mui-btn Войти

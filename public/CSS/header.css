@@ -1,0 +1,24 @@
+.header-top {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 15px;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.header-top-column {
+	display: flex;
+	align-items: center;
+}
+
+.header-top-column.left {
+	flex-wrap: nowrap;
+	margin-right: 50px;
+}
+
+.header-top-column.right {
+	justify-content: flex-end;
+	margin-right: 15px;
+}

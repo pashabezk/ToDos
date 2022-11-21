@@ -1,0 +1,11 @@
+extends main_layout.pug
+
+block content
+    h1 Добавление задачи
+    form(action="/newTodo" method="post").mui-form.mui-panel
+        .mui-textfield.mui-textfield--float-label
+            textarea(required='' id="text" name="text" maxlength="300")
+            label Текст задачи
+        button.mui-btn.mui-btn--primary Добавить
+        if message
+            p.mui--text-accent #{message}

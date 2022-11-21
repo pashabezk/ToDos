@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    title #{title}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    link(rel='stylesheet' href='CSS/main.css')
+    link(rel='stylesheet' href='CSS/header.css')
+    link(rel='stylesheet' href='CSS/footer.css')
+    block styles
+    <meta charset="utf-8" />
+</head>
+<body>
+    .app-wrapper
+        include header.pug
+        main.center
+            block content
+        include footer.pug
+    block scripts
+</body>
+</html>
